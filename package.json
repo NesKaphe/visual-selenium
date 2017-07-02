@@ -2,10 +2,17 @@
   "name": "visual-selenium",
   "version": "0.0.1",
   "description": "Create selenium scripts with your browser without any code",
-  "main": "index.js",
+  "main": "./visual-selenium.js",
+  "bin": {
+    "visual-selenium": "./bin/visual-selenium.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alain DIAS",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "dependencies": {
+    "commander": "^2.10.0",
+    "npminstall": "^3.0.1"
+  }
 }
