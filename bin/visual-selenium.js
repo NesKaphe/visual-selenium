@@ -6,13 +6,11 @@ var VisualSelenium = require('../');
 
 var pkg = require('../package.json');
 
-var cmd;
-
 program
     .version(pkg.version)
     .option('--create', 'Create a new project.')
     .option('--launch', 'Launch a server to start recording with selenium')
-    .option('--config [json config]', 'if provided, will use the json config instead of a prompt')
+    .option('--config [json config]', 'if provided, will use the json config')
     .option('--browser [driver]', 'if provided, will use the browser to launch record')
     .parse(process.argv);
 
@@ -23,7 +21,6 @@ if(program.create && program.launch) {
 }
 
 if(program.create) {
-    console.log("TODO");
     VisualSelenium.create({
         config: program.config
     });
